@@ -139,7 +139,7 @@ describe('getImplicitlyTouchedProjects', () => {
         root: 'a',
         targets: {
           build: {
-            inputs: ['files'],
+            inputs: ['files', '{workspaceRoot}/b.txt'],
           },
         },
       },
@@ -148,6 +148,10 @@ describe('getImplicitlyTouchedProjects', () => {
       },
     });
     let fileChanges = getFileChanges(['a.txt']);
+    expect(getImplicitlyTouchedProjects(fileChanges, graph, nxJson)).toEqual([
+      'a',
+    ]);
+    fileChanges = getFileChanges(['b.txt']);
     expect(getImplicitlyTouchedProjects(fileChanges, graph, nxJson)).toEqual([
       'a',
     ]);
@@ -170,6 +174,26 @@ describe('getImplicitlyTouchedProjects', () => {
     expect(getImplicitlyTouchedProjects(fileChanges, graph, nxJson)).toEqual(
       []
     );
+  });
+
+  it('should return every project when nx.json is touched', () => {
+    const graph = buildProjectGraphNodes({
+      a: {
+        root: 'a',
+        namedInputs: {
+          files: ['{workspaceRoot}/a.txt'],
+        },
+        targets: {},
+      },
+      b: {
+        root: 'b',
+      },
+    });
+    let fileChanges = getFileChanges(['nx.json']);
+    expect(getImplicitlyTouchedProjects(fileChanges, graph, nxJson)).toEqual([
+      'a',
+      'b',
+    ]);
   });
 });
 

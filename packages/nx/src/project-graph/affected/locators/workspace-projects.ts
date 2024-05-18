@@ -26,7 +26,9 @@ export const getImplicitlyTouchedProjects: TouchedProjectLocator = (
   projectGraphNodes,
   nxJson
 ): string[] => {
-  const implicits = {};
+  const implicits = {
+    'nx.json': '*',
+  };
 
   Object.values(projectGraphNodes || {}).forEach((node) => {
     const namedInputs = {
@@ -87,7 +89,9 @@ function extractFilesFromInputs(
   const globalFiles = [];
   for (const input of inputs) {
     if (typeof input === 'string' && input in namedInputs) {
-      return extractFilesFromInputs(namedInputs[input], namedInputs);
+      globalFiles.push(
+        ...extractFilesFromInputs(namedInputs[input], namedInputs)
+      );
     } else if (
       typeof input === 'string' &&
       input.startsWith('{workspaceRoot}/')

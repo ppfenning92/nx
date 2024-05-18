@@ -2,7 +2,7 @@
 
 If you have an existing monorepo that uses Turborepo, switching to use Nx is a straight-forward process. After switching, you'll have cleaner CLI output, a better graph view and IDE support with the option to incorporate Nx plugins and take advantage of the features of an integrated repository. All this without increasing the complexity of your configuration files.
 
-For more details, read our [comparison of Nx and Turborepo](/concepts/more-concepts/turbo-and-nx)
+For more details, read our [comparison of Nx and Turborepo](/concepts/turbo-and-nx)
 
 ## Initialize Nx
 
@@ -139,7 +139,7 @@ For each `turbo.json` configuration property, the equivalent Nx property is list
 | `--ignore`                  | Use an [`.nxignore` file](/reference/nxignore) (or `.gitignore`)                                                                                                                      |
 | `--log-order`               | Use [`--output-style`](/nx-api/nx/documents/run-many#output-style)                                                                                                                    |
 | `--no-cache`                | Use [`--skip-nx-cache`](/nx-api/nx/documents/run-many#skip-nx-cache)                                                                                                                  |
-| `--no-daemon`               | Use [`NX_DAEMON=false` or set `useDaemonProcess: false`](/concepts/more-concepts/nx-daemon#turning-it-off) in `nx.json`                                                               |
+| `--no-daemon`               | Use [`NX_DAEMON=false` or set `useDaemonProcess: false`](/concepts/nx-daemon#turning-it-off) in `nx.json`                                                                             |
 | `--output-logs`             | Use [`--output-style`](/nx-api/nx/documents/run-many#output-style)                                                                                                                    |
 | `--only`                    | N/A                                                                                                                                                                                   |
 | `--parallel`                | N/A                                                                                                                                                                                   |
@@ -150,8 +150,8 @@ For each `turbo.json` configuration property, the equivalent Nx property is list
 | `--preflight`               | N/A                                                                                                                                                                                   |
 | `--trace`                   | N/A. [`--verbose`](/nx-api/nx/documents/run-many#verbose) for more logging.                                                                                                           |
 | `--heap`                    | N/A. [`--verbose`](/nx-api/nx/documents/run-many#verbose) for more logging.                                                                                                           |
-| `--cpuprofile`              | Use [`NX_PROFILE=profile.json`](/recipes/troubleshooting/performance-profiling).                                                                                                      |
+| `--cpuprofile`              | Use [`NX_PROFILE=profile.json`](/troubleshooting/performance-profiling).                                                                                                              |
 | `--verbosity`               | Use [`--verbose`](/nx-api/nx/documents/run-many#verbose)                                                                                                                              |
 | `turbo gen`                 | [Use `nx generate`](/nx-api/nx/documents/generate)                                                                                                                                    |
-| `turbo login`               | No need. [Use `nx connect`](/nx-api/nx/documents/connect-to-nx-cloud) once to set up Nx Cloud.                                                                                        |
-| `turbo link`                | [Use `nx connect`](/nx-api/nx/documents/connect-to-nx-cloud)                                                                                                                          |
+| `turbo login`               | No need. [Create an Nx Cloud account](/nx-api/nx/documents/connect-to-nx-cloud) once to set up Nx Cloud.                                                                              |
+| `turbo link`                | [Create an Nx Cloud account](/nx-api/nx/documents/connect-to-nx-cloud)                                                                                                                |

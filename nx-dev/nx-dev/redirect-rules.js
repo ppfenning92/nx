@@ -259,15 +259,12 @@ const diataxis = {
   '/ci/monorepo-ci-bitbucket-pipelines':
     '/recipes/ci/monorepo-ci-bitbucket-pipelines',
   '/ci/distributed-builds': '/nx-cloud/concepts/parallelization-distribution', // 👀
-  '/ci/incremental-builds': '/concepts/more-concepts/incremental-builds',
   '/ci/setup-incremental-builds-angular':
     '/recipes/other/setup-incremental-builds-angular',
   '/guides/turbo-and-nx': '/concepts/more-concepts/turbo-and-nx',
   '/guides/why-monorepos': '/concepts/more-concepts/why-monorepos',
   '/guides/adding-assets-react': '/recipes/other/adding-assets-react',
   '/guides/environment-variables': '/reference/environment-variables',
-  '/guides/monorepo-nx-enterprise':
-    '/concepts/more-concepts/monorepo-nx-enterprise',
   '/guides/performance-profiling': '/recipes/other/performance-profiling',
   '/guides/eslint': '/recipes/other/eslint',
   '/guides/customize-webpack': '/recipes/webpack/webpack-config-setup',
@@ -332,10 +329,6 @@ const cliUrls = {
   '/cli/dep-graph': '/nx/dep-graph',
   '/cli/run-many': '/nx/run-many',
   '/cli/affected': '/nx/affected',
-  '/cli/affected-dep-graph': '/nx/affected-dep-graph',
-  '/cli/affected-apps': '/packages/nx/documents/print-affected',
-  '/cli/affected-libs': '/packages/nx/documents/print-affected',
-  '/cli/print-affected': '/packages/nx/documents/print-affected',
   '/cli/format-check': '/nx/format-check',
   '/cli/format-write': '/nx/format-write',
   '/cli/migrate': '/nx/migrate',
@@ -387,6 +380,11 @@ const recipesUrls = {
     '/recipes/webpack/webpack-config-setup',
   '/showcase/example-repos/add-nuxt': '/nx-api/nuxt',
   '/showcase/example-repos/add-vue': '/nx-api/vue',
+  '/recipes/react/react-18': '/nx-api/react',
+  '/recipes/nx-console/console-shortcuts': '/getting-started/editor-setup',
+  '/recipes/nx-console/console-project-pane': '/getting-started/editor-setup',
+  '/recipes/nx-console/console-add-dependency-command':
+    '/getting-started/editor-setup',
 };
 
 /**
@@ -647,14 +645,6 @@ const packagesDocuments = {
   '/nx/dep-graph': '/packages/nx/documents/dep-graph',
   '/nx/run-many': '/packages/nx/documents/run-many',
   '/nx/affected': '/packages/nx/documents/affected',
-  '/nx/affected-dep-graph': '/packages/nx/documents/affected-dep-graph',
-  '/nx/affected-apps': '/packages/nx/documents/print-affected',
-  '/nx/affected-libs': '/packages/nx/documents/print-affected',
-  '/nx/print-affected': '/packages/nx/documents/print-affected',
-  '/packages/nx/documents/affected-apps':
-    '/packages/nx/documents/print-affected',
-  '/packages/nx/documents/affected-libs':
-    '/packages/nx/documents/print-affected',
   '/nx/format-check': '/packages/nx/documents/format-check',
   '/nx/format-write': '/packages/nx/documents/format-write',
   '/nx/migrate': '/packages/nx/documents/migrate',
@@ -770,6 +760,12 @@ const conceptUrls = {
     '/concepts/module-federation/micro-frontend-architecture',
   '/concepts/more-concepts/faster-builds-with-module-federation':
     '/concepts/module-federation/faster-builds-with-module-federation',
+  '/concepts/more-concepts/nx-and-angular':
+    '/nx-api/angular/documents/nx-and-angular',
+  '/concepts/more-concepts/nx-devkit-angular-devkit':
+    '/nx-api/angular/documents/nx-devkit-angular-devkit',
+  '/concepts/more-concepts/incremental-builds':
+    '/concepts/more-concepts/buildable-and-publishable-libraries',
 };
 
 const nested5minuteTutorialUrls = {
@@ -891,7 +887,9 @@ const latestRecipesRefactoring = {
   '/recipes/adopting-nx-angular/angular-integrated':
     '/recipes/angular/migration/angular',
   '/recipes/adopting-nx-angular/angular-manual':
-    '/recipes/angular/migration/angular-manual',
+    '/recipes/angular/migration/angular',
+  '/recipes/angular/migration/angular-manual':
+    '/recipes/angular/migration/angular',
   '/recipes/adopting-nx-angular/angular-multiple':
     '/recipes/angular/migration/angular-multiple',
   '/recipes/adopting-nx/migration-angularjs':
@@ -936,17 +934,6 @@ const latestRecipesRefactoring = {
   '/recipes/database/serverless-fastify-planetscale':
     '/showcase/example-repos/serverless-fastify-planetscale',
   '/recipes/example-repos/:path*': '/showcase/example-repos/:path*',
-  // troubleshooting
-  '/recipes/other/resolve-circular-dependencies':
-    '/recipes/troubleshooting/resolve-circular-dependencies',
-  '/recipes/ci/troubleshoot-nx-install-issues':
-    '/recipes/troubleshooting/troubleshoot-nx-install-issues',
-  '/recipes/other/troubleshoot-cache-misses':
-    '/recipes/troubleshooting/troubleshoot-cache-misses',
-  '/recipes/other/unknown-local-cache':
-    '/recipes/troubleshooting/unknown-local-cache',
-  '/recipes/other/performance-profiling':
-    '/recipes/troubleshooting/performance-profiling',
   // tips and tricks
   '/recipes/environment-variables/define-environment-variables':
     '/recipes/tips-n-tricks/define-environment-variables',
@@ -1024,6 +1011,78 @@ const eslintRename = {
   '/packages/linter': '/packages/eslint',
 };
 
+// move troubleshooting out of recipes
+const troubleshootingOutOfRecipes = {
+  '/recipes/troubleshooting': '/troubleshooting',
+  '/recipes/troubleshooting/:path*': '/troubleshooting/:path*',
+  '/ci/recipes/troubleshooting/:path*': '/ci/troubleshooting/:path*',
+  '/recipes/other/resolve-circular-dependencies':
+    '/troubleshooting/resolve-circular-dependencies',
+  '/recipes/ci/troubleshoot-nx-install-issues':
+    '/troubleshooting/troubleshoot-nx-install-issues',
+  '/recipes/other/troubleshoot-cache-misses':
+    '/troubleshooting/troubleshoot-cache-misses',
+  '/recipes/other/unknown-local-cache': '/troubleshooting/unknown-local-cache',
+  '/recipes/other/performance-profiling':
+    '/troubleshooting/performance-profiling',
+};
+
+/**
+ * Removed deprecated URLs
+ */
+const removedDeprecatedUrls = {
+  '/nx-api/nx/documents/affected-dep-graph': '/deprecated/affected-graph', // nx affected:graph was removed in Nx 19
+  '/cli/affected-dep-graph': '/deprecated/affected-graph',
+  '/nx/affected-dep-graph': '/deprecated/affected-graph',
+  '/nx-api/nx/documents/print-affected': '/deprecated/print-affected', // nx affected:graph was removed in Nx 19
+  '/cli/affected-apps': '/deprecated/print-affected',
+  '/cli/affected-libs': '/deprecated/print-affected',
+  '/cli/print-affected': '/deprecated/print-affected',
+  '/packages/nx/documents/print-affected': '/deprecated/print-affected',
+  '/nx/affected-apps': '/deprecated/print-affected',
+  '/nx/affected-libs': '/deprecated/print-affected',
+  '/nx/print-affected': '/deprecated/print-affected',
+  '/packages/nx/documents/affected-apps': '/deprecated/print-affected',
+  '/packages/nx/documents/affected-libs': '/deprecated/print-affected',
+  '/deprecated/default-collection': '/features/generate-code', // 46 views: has not worked since Nx 17 and has very little views
+  '/deprecated/workspace-lint': '/nx-api/nx/documents/report', // 168 views: workspace-lint hasn't worked since Nx 15 and users should use `nx report` to check versions and other info
+  '/deprecated/storybook/angular-storybook-targets':
+    '/recipes/storybook/overview-angular', // 49 views
+  '/deprecated/storybook/angular-project-build-config':
+    '/recipes/storybook/overview-angular', // 126 views: outdated since Nx 14
+  '/deprecated/storybook/migrate-webpack-final-angular':
+    '/recipes/storybook/overview-angular', // 50 views: For Nx < 12.7
+  '/deprecated/storybook/upgrade-storybook-v6-angular':
+    '/recipes/storybook/overview-angular', // 44 views: outdated since Nx 14
+  '/deprecated/storybook/migrate-webpack-final-react':
+    '/recipes/storybook/overview-react', // 417 views: mostly people searching "React Storybook" is matching this outdated page that was for Nx 12.7
+  '/deprecated/storybook/upgrade-storybook-v6-react':
+    '/recipes/storybook/overview-react', // 80 views
+};
+
+const decisionsSection = {
+  '/concepts/more-concepts/why-monorepos': '/concepts/decisions/why-monorepos',
+  '/concepts/more-concepts/dependency-management':
+    '/concepts/decisions/dependency-management',
+  '/concepts/more-concepts/code-sharing': '/concepts/decisions/code-ownership',
+  '/concepts/more-concepts/applications-and-libraries':
+    '/concepts/decisions/project-size',
+  '/concepts/more-concepts/creating-libraries':
+    '/concepts/decisions/project-size',
+  '/concepts/more-concepts/library-types':
+    '/concepts/decisions/project-dependency-rules',
+  '/concepts/more-concepts/grouping-libraries':
+    '/concepts/decisions/folder-structure',
+  '/concepts/more-concepts/turbo-and-nx': '/concepts/turbo-and-nx',
+  '/concepts/more-concepts/nx-daemon': '/concepts/nx-daemon',
+  '/concepts/more-concepts/buildable-and-publishable-libraries':
+    '/concepts/buildable-and-publishable-libraries',
+};
+// Blog post redirects
+const blogPosts = {
+  '/blog/2024-05-07-nx-19-release': '/blog/2024-05-08-nx-19-release',
+};
+
 /**
  * Public export API
  */
@@ -1051,4 +1110,8 @@ module.exports = {
   coreFeatureRefactoring: coreFeatureAndConceptsRefactoring,
   aiChat,
   eslintRename,
+  removedDeprecatedUrls,
+  troubleshootingOutOfRecipes,
+  blogPosts,
+  decisionsSection,
 };

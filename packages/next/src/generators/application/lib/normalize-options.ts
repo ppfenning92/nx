@@ -94,7 +94,7 @@ export async function normalizeOptions(
   const appDir = options.appDir ?? true;
   const src = options.src ?? true;
 
-  const styledModule = /^(css|scss|less)$/.test(options.style)
+  const styledModule = /^(css|scss|less|tailwind)$/.test(options.style)
     ? null
     : options.style;
 
@@ -110,7 +110,7 @@ export async function normalizeOptions(
     e2eWebServerAddress,
     e2eWebServerTarget,
     e2ePort,
-    e2eTestRunner: options.e2eTestRunner || 'cypress',
+    e2eTestRunner: options.e2eTestRunner || 'playwright',
     fileName,
     linter: options.linter || Linter.EsLint,
     name,
