@@ -29,6 +29,13 @@
               "file": "shared/getting-started/why-nx"
             },
             {
+              "name": "Editor Setup",
+              "description": "Learn about Nx Console, an extension for VS Code and WebStorm.",
+              "id": "editor-setup",
+              "tags": ["editor-setup"],
+              "file": "shared/getting-started/editor-setup"
+            },
+            {
               "name": "Tutorials",
               "id": "tutorials",
               "description": "Get started with basic information, concepts and tutorials.",
@@ -37,11 +44,6 @@
                   "name": "NPM Workspaces Monorepo",
                   "id": "npm-workspaces-tutorial",
                   "file": "shared/tutorials/npm-workspaces"
-                },
-                {
-                  "name": "Integrated Monorepo",
-                  "id": "integrated-repo-tutorial",
-                  "file": "shared/npm-tutorial/integrated"
                 },
                 {
                   "name": "React Standalone",
@@ -155,17 +157,10 @@
               "file": "shared/features/enforce-module-boundaries"
             },
             {
-              "name": "Integrate with Editors",
-              "description": "Learn about Nx Console, an extension for VS Code and WebStorm.",
-              "id": "integrate-with-editors",
-              "tags": ["integrate-with-editors"],
-              "file": "shared/features/integrate-with-editors"
-            },
-            {
               "name": "Manage Releases",
               "description": "Learn how Nx provides tools to help you manage releasing your projects.",
               "id": "manage-releases",
-              "tags": ["manage-releases"],
+              "tags": ["nx-release"],
               "file": "shared/features/manage-releases"
             },
             {
@@ -236,7 +231,7 @@
           "itemList": [
             {
               "name": "Mental Model",
-              "tags": ["intro"],
+              "tags": ["intro", "inferred-tasks"],
               "id": "mental-model",
               "file": "shared/mental-model"
             },
@@ -254,7 +249,11 @@
             },
             {
               "name": "What Are Nx Plugins",
-              "tags": ["generate-code", "create-your-own-plugin"],
+              "tags": [
+                "generate-code",
+                "create-your-own-plugin",
+                "inferred-tasks"
+              ],
               "id": "nx-plugins",
               "file": "shared/concepts/nx-plugins"
             },
@@ -402,7 +401,7 @@
                 {
                   "name": "How the Project Graph is Built",
                   "id": "how-project-graph-is-built",
-                  "tags": ["explore-graph"],
+                  "tags": ["explore-graph", "inferred-tasks"],
                   "file": "shared/concepts/how-project-graph-is-built"
                 }
               ]
@@ -511,11 +510,6 @@
               "id": "react",
               "description": "Advanced guides to adopt Nx in React.",
               "itemList": [
-                {
-                  "name": "Migrating from CRA",
-                  "id": "migration-cra",
-                  "file": "shared/migration/migration-cra"
-                },
                 {
                   "name": "React 18 Migration",
                   "id": "react-18",
@@ -1062,49 +1056,49 @@
                 {
                   "name": "Telemetry",
                   "id": "console-telemetry",
-                  "tags": ["integrate-with-editors"],
+                  "tags": ["editor-setup"],
                   "file": "shared/recipes/console-telemetry"
                 },
                 {
                   "name": "Project Details View",
                   "id": "console-project-details",
-                  "tags": ["integrate-with-editors"],
+                  "tags": ["editor-setup"],
                   "file": "shared/recipes/console-project-details"
                 },
                 {
                   "name": "Generate Command",
                   "id": "console-generate-command",
-                  "tags": ["integrate-with-editors"],
+                  "tags": ["editor-setup"],
                   "file": "shared/recipes/console-generate-command"
                 },
                 {
                   "name": "Run Command",
                   "id": "console-run-command",
-                  "tags": ["integrate-with-editors"],
+                  "tags": ["editor-setup"],
                   "file": "shared/recipes/console-run-command"
                 },
                 {
                   "name": "Add Dependency Command",
                   "id": "console-add-dependency-command",
-                  "tags": ["integrate-with-editors"],
+                  "tags": ["editor-setup"],
                   "file": "shared/recipes/console-add-dependency-command"
                 },
                 {
                   "name": "Project Pane",
                   "id": "console-project-pane",
-                  "tags": ["integrate-with-editors"],
+                  "tags": ["editor-setup"],
                   "file": "shared/recipes/console-project-pane"
                 },
                 {
                   "name": "Keyboard Shortcuts",
                   "id": "console-shortcuts",
-                  "tags": ["integrate-with-editors"],
+                  "tags": ["editor-setup"],
                   "file": "shared/recipes/console-shortcuts"
                 },
                 {
                   "name": "Troubleshooting",
                   "id": "console-troubleshooting",
-                  "tags": ["integrate-with-editors"],
+                  "tags": ["editor-setup"],
                   "file": "shared/recipes/console-troubleshooting"
                 }
               ]
@@ -1131,6 +1125,12 @@
                   "id": "automatically-version-with-conventional-commits",
                   "tags": ["nx-release"],
                   "file": "shared/recipes/nx-release/automatically-version-with-conventional-commits"
+                },
+                {
+                  "name": "Configure Custom Registries",
+                  "id": "configure-custom-registries",
+                  "tags": ["nx-release"],
+                  "file": "shared/recipes/nx-release/configure-custom-registries"
                 },
                 {
                   "name": "Publish in CI/CD",
@@ -1643,7 +1643,11 @@
             {
               "name": "Modify the Project Graph",
               "id": "project-graph-plugins",
-              "tags": ["create-your-own-plugin", "explore-graph"],
+              "tags": [
+                "create-your-own-plugin",
+                "explore-graph",
+                "inferred-tasks"
+              ],
               "file": "shared/recipes/plugins/project-graph-plugins"
             }
           ]
@@ -1664,6 +1668,11 @@
               "name": "CI with Nx",
               "id": "ci-with-nx",
               "file": "nx-cloud/intro/ci-with-nx"
+            },
+            {
+              "name": "Why Nx Cloud?",
+              "id": "why-nx-cloud",
+              "file": "nx-cloud/intro/why-nx-cloud"
             },
             {
               "name": "Tutorials",
@@ -1691,6 +1700,7 @@
           "itemList": [
             {
               "name": "Run Only Tasks Affected by a PR",
+              "description": "This allows to only run tasks on projects that got changed in a given PR.",
               "tags": ["run-tasks"],
               "id": "affected",
               "file": "shared/using-nx/affected"
@@ -1710,17 +1720,20 @@
             },
             {
               "name": "Dynamically Allocate Agents",
+              "description": "Learn how to dynamically allocate agents based on the size of a PR, keeping the balance of speed and cost.",
               "id": "dynamic-agents",
               "file": "nx-cloud/features/dynamic-agents"
             },
             {
-              "name": "Automatically Split E2E Tasks (TestAtomizer)",
+              "name": "Automatically Split E2E Tasks (Atomizer)",
               "id": "split-e2e-tasks",
+              "description": "Learn how Nx can automatically split e2e tests into fine-grained chunks for a much better distribution on Nx Agents.",
               "file": "nx-cloud/features/split-e2e-tasks"
             },
             {
               "name": "Identify and Re-run Flaky Tasks",
               "id": "flaky-tasks",
+              "description": "Learn how Nx Cloud is able to automatically identify flaky tasks and re-run them for you.",
               "file": "nx-cloud/features/flaky-tasks"
             },
             {
@@ -1851,6 +1864,11 @@
                   "name": "Enable GitLab MR Integration",
                   "id": "gitlab",
                   "file": "nx-cloud/set-up/gitlab"
+                },
+                {
+                  "name": "Enable Azure DevOps PR Integration",
+                  "id": "azure-devops",
+                  "file": "nx-cloud/set-up/azure-devops"
                 }
               ]
             },
@@ -2003,11 +2021,6 @@
               "file": "nx-cloud/reference/env-vars"
             },
             {
-              "name": "Server API Reference",
-              "id": "server-api",
-              "file": "nx-cloud/reference/server-api"
-            },
-            {
               "name": "Release Notes",
               "id": "release-notes",
               "file": "nx-cloud/reference/release-notes"
@@ -2157,6 +2170,7 @@
             {
               "name": "release",
               "id": "release",
+              "tags": ["nx-release"],
               "file": "generated/cli/release"
             },
             {

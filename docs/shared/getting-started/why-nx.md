@@ -30,7 +30,7 @@ Nx is built in a modular fashion to let you only use the features you need.
 - The **Nx** package provides fundamental technology-agnostic capabilities such as: [workspace analysis](/features/explore-graph), [task running](/features/run-tasks), [caching](/features/cache-task-results), [distribution](/ci/features/distribute-task-execution), [code generation](/features/generate-code) and [automated code migrations](/features/automate-updating-dependencies).
 - **Plugins** are NPM packages that build on top of the fundamental capabilities provided by the Nx package. Nx plugins contain [code generators](/features/generate-code), [executors](/concepts/executors-and-configurations) (to abstract lower-level build tooling) and automated code migrations for keeping your tools up to date. Contrary to the Nx package, which works the same way with any JS or non-JS project, plugins are usually technology specific. For instance, `@nx/react` adds support for building React apps and libs, `@nx/cypress` adds e2e testing capabilities with Cypress. Plugins make developers more productive by removing any friction of integrating different tools with each other and by providing utilities to keep them up to date. The Nx team maintains plugins for React, Next, Remix, Angular, Jest, Cypress, Storybook and more. You can use the `@nx/plugin` package to easily [scaffold a new plugin](/extending-nx/intro/getting-started) or even just [automate your local workspace](/extending-nx/recipes/local-generators). There are also more than 80 [community plugins](/plugin-registry).
 - **Devkit** is a set of utilities for [building Nx plugins](/extending-nx/intro/getting-started).
-- **Nx Console** is an extension for **VSCode, IntelliJ and VIM**. It provides code autocompletion, interactive generators, workspace visualizations, powerful refactorings and more. You can [install it here](/features/integrate-with-editors).
+- **Nx Console** is an extension for **VSCode, IntelliJ and VIM**. It provides code autocompletion, interactive generators, workspace visualizations, powerful refactorings and more. You can [install it here](/getting-started/editor-setup).
 
 ## How Can Nx Improve Your CI Pipeline?
 
@@ -39,7 +39,7 @@ The benefits of Nx are not restricted to local development. [Nx Cloud](https://n
 - Run only tasks [affected](/ci/features/affected) by that PR
 - [Share the task cache](/ci/features/remote-cache) between CI and local development machines (Nx Replay)
 - [Distribute task execution](/ci/features/distribute-task-execution) across multiple agent machines (Nx Agents)
-- Automatically [split long e2e tasks](/ci/features/split-e2e-tasks) into smaller tasks (Test Atomizer)
+- Automatically [split long e2e tasks](/ci/features/split-e2e-tasks) into smaller tasks (Atomizer)
 - Identify and Re-run [Flaky Tasks](/ci/features/flaky-tasks)
 
 Nx Cloud also provides direct integration with GitHub, GitLab, Bitbucket and Azure version control systems. Learn more at [nx.app](https://nx.app).

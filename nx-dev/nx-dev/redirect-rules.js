@@ -186,7 +186,7 @@ const guideUrls = {
   '/migration/lerna-and-nx': 'https://lerna.js.org',
   '/cypress/v10-migration-guide': '/cypress/v11-migration-guide',
   '/cypress/generators/migrate-to-cypress-10':
-    '/cypress/generators/migrate-to-cypress-11',
+    '/packages/cypress/generators/migrate-to-cypress-11',
 };
 
 /**
@@ -201,7 +201,8 @@ const diataxis = {
   '/configuration/packagejson': '/reference/project-configuration',
   '/configuration/projectjson': '/reference/project-configuration',
   '/using-nx/nx-cli': '/getting-started/intro',
-  '/using-nx/console': '/features/integrate-with-editors',
+  '/using-nx/console': '/getting-started/editor-setup',
+  '/features/integrate-with-editors': '/getting-started/editor-setup',
   '/using-nx/mental-model': '/concepts/mental-model',
   '/using-nx/caching': '/concepts/how-caching-works',
   '/using-nx/dte': '/features/distribute-task-execution',
@@ -217,7 +218,7 @@ const diataxis = {
     '/recipes/advanced-plugins/project-graph-plugins',
   '/migration/lerna-and-nx': '/recipes/adopting-nx/lerna-and-nx',
   '/migration/adding-to-monorepo': '/recipes/adopting-nx/adding-to-monorepo',
-  '/migration/migration-cra': '/recipes/adopting-nx/migration-cra',
+  '/migration/migration-cra': '/recipes/adopting-nx/adding-to-existing-project',
   '/migration/migration-angular': '/recipes/adopting-nx/migration-angular',
   '/migration/migration-angularjs': '/recipes/adopting-nx/migration-angular',
   '/recipes/angular/migration/angularjs':
@@ -758,7 +759,9 @@ const conceptUrls = {
   '/getting-started/tutorials/package-based-repo-tutorial':
     '/getting-started/tutorials/npm-workspaces-tutorial',
   '/getting-started/integrated-repo-tutorial':
-    '/getting-started/tutorials/integrated-repo-tutorial',
+    '/getting-started/tutorials/react-monorepo-tutorial',
+  '/getting-started/tutorials/integrated-repo-tutorial':
+    '/getting-started/tutorials/react-monorepo-tutorial',
   '/getting-started/react-standalone-tutorial':
     '/getting-started/tutorials/react-standalone-tutorial',
   '/getting-started/angular-standalone-tutorial':
@@ -781,6 +784,8 @@ const nested5minuteTutorialUrls = {
   '/tutorials/node-server-tutorial': '/getting-started/tutorials',
   '/angular-tutorial': '/getting-started/tutorials/angular-monorepo-tutorial',
   '/angular-tutorial/1-code-generation':
+    '/getting-started/tutorials/angular-monorepo-tutorial',
+  '/getting-started/angular-monorepo-tutorial':
     '/getting-started/tutorials/angular-monorepo-tutorial',
   '/angular-tutorial/2-project-graph':
     '/getting-started/tutorials/angular-monorepo-tutorial',
@@ -900,7 +905,10 @@ const latestRecipesRefactoring = {
   '/recipes/other/setup-incremental-builds-angular':
     '/recipes/angular/setup-incremental-builds-angular',
   // react
-  '/recipes/adopting-nx/migration-cra': '/recipes/react/migration-cra',
+  '/recipes/adopting-nx/migration-cra':
+    '/recipes/adopting-nx/adding-to-existing-project',
+  '/recipes/react/migration-cra':
+    '/recipes/adopting-nx/adding-to-existing-project',
   '/recipes/other/react-18': '/recipes/react/react-18',
   '/recipes/other/react-native': '/recipes/react/react-native',
   '/recipes/other/remix': '/recipes/react/remix',

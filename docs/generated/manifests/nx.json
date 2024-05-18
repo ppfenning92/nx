@@ -40,6 +40,17 @@
         "tags": []
       },
       {
+        "id": "editor-setup",
+        "name": "Editor Setup",
+        "description": "Learn about Nx Console, an extension for VS Code and WebStorm.",
+        "mediaImage": "",
+        "file": "shared/getting-started/editor-setup",
+        "itemList": [],
+        "isExternal": false,
+        "path": "/getting-started/editor-setup",
+        "tags": ["editor-setup"]
+      },
+      {
         "id": "tutorials",
         "name": "Tutorials",
         "description": "Get started with basic information, concepts and tutorials.",
@@ -55,17 +66,6 @@
             "itemList": [],
             "isExternal": false,
             "path": "/getting-started/tutorials/npm-workspaces-tutorial",
-            "tags": []
-          },
-          {
-            "id": "integrated-repo-tutorial",
-            "name": "Integrated Monorepo",
-            "description": "",
-            "mediaImage": "",
-            "file": "shared/npm-tutorial/integrated",
-            "itemList": [],
-            "isExternal": false,
-            "path": "/getting-started/tutorials/integrated-repo-tutorial",
             "tags": []
           },
           {
@@ -166,6 +166,17 @@
     "path": "/getting-started/why-nx",
     "tags": []
   },
+  "/getting-started/editor-setup": {
+    "id": "editor-setup",
+    "name": "Editor Setup",
+    "description": "Learn about Nx Console, an extension for VS Code and WebStorm.",
+    "mediaImage": "",
+    "file": "shared/getting-started/editor-setup",
+    "itemList": [],
+    "isExternal": false,
+    "path": "/getting-started/editor-setup",
+    "tags": ["editor-setup"]
+  },
   "/getting-started/tutorials": {
     "id": "tutorials",
     "name": "Tutorials",
@@ -182,17 +193,6 @@
         "itemList": [],
         "isExternal": false,
         "path": "/getting-started/tutorials/npm-workspaces-tutorial",
-        "tags": []
-      },
-      {
-        "id": "integrated-repo-tutorial",
-        "name": "Integrated Monorepo",
-        "description": "",
-        "mediaImage": "",
-        "file": "shared/npm-tutorial/integrated",
-        "itemList": [],
-        "isExternal": false,
-        "path": "/getting-started/tutorials/integrated-repo-tutorial",
         "tags": []
       },
       {
@@ -264,17 +264,6 @@
     "itemList": [],
     "isExternal": false,
     "path": "/getting-started/tutorials/npm-workspaces-tutorial",
-    "tags": []
-  },
-  "/getting-started/tutorials/integrated-repo-tutorial": {
-    "id": "integrated-repo-tutorial",
-    "name": "Integrated Monorepo",
-    "description": "",
-    "mediaImage": "",
-    "file": "shared/npm-tutorial/integrated",
-    "itemList": [],
-    "isExternal": false,
-    "path": "/getting-started/tutorials/integrated-repo-tutorial",
     "tags": []
   },
   "/getting-started/tutorials/react-standalone-tutorial": {
@@ -550,17 +539,6 @@
         "tags": ["enforce-module-boundaries"]
       },
       {
-        "id": "integrate-with-editors",
-        "name": "Integrate with Editors",
-        "description": "Learn about Nx Console, an extension for VS Code and WebStorm.",
-        "mediaImage": "",
-        "file": "shared/features/integrate-with-editors",
-        "itemList": [],
-        "isExternal": false,
-        "path": "/features/integrate-with-editors",
-        "tags": ["integrate-with-editors"]
-      },
-      {
         "id": "manage-releases",
         "name": "Manage Releases",
         "description": "Learn how Nx provides tools to help you manage releasing your projects.",
@@ -569,7 +547,7 @@
         "itemList": [],
         "isExternal": false,
         "path": "/features/manage-releases",
-        "tags": ["manage-releases"]
+        "tags": ["nx-release"]
       },
       {
         "id": "ci-features",
@@ -731,17 +709,6 @@
     "path": "/features/enforce-module-boundaries",
     "tags": ["enforce-module-boundaries"]
   },
-  "/features/integrate-with-editors": {
-    "id": "integrate-with-editors",
-    "name": "Integrate with Editors",
-    "description": "Learn about Nx Console, an extension for VS Code and WebStorm.",
-    "mediaImage": "",
-    "file": "shared/features/integrate-with-editors",
-    "itemList": [],
-    "isExternal": false,
-    "path": "/features/integrate-with-editors",
-    "tags": ["integrate-with-editors"]
-  },
   "/features/manage-releases": {
     "id": "manage-releases",
     "name": "Manage Releases",
@@ -751,7 +718,7 @@
     "itemList": [],
     "isExternal": false,
     "path": "/features/manage-releases",
-    "tags": ["manage-releases"]
+    "tags": ["nx-release"]
   },
   "/features/ci-features": {
     "id": "ci-features",
@@ -935,7 +902,7 @@
         "itemList": [],
         "isExternal": false,
         "path": "/concepts/mental-model",
-        "tags": ["intro"]
+        "tags": ["intro", "inferred-tasks"]
       },
       {
         "id": "how-caching-works",
@@ -968,7 +935,7 @@
         "itemList": [],
         "isExternal": false,
         "path": "/concepts/nx-plugins",
-        "tags": ["generate-code", "create-your-own-plugin"]
+        "tags": ["generate-code", "create-your-own-plugin", "inferred-tasks"]
       },
       {
         "id": "inferred-tasks",
@@ -1251,7 +1218,7 @@
             "itemList": [],
             "isExternal": false,
             "path": "/concepts/more-concepts/how-project-graph-is-built",
-            "tags": ["explore-graph"]
+            "tags": ["explore-graph", "inferred-tasks"]
           }
         ],
         "isExternal": false,
@@ -1272,7 +1239,7 @@
     "itemList": [],
     "isExternal": false,
     "path": "/concepts/mental-model",
-    "tags": ["intro"]
+    "tags": ["intro", "inferred-tasks"]
   },
   "/concepts/how-caching-works": {
     "id": "how-caching-works",
@@ -1305,7 +1272,7 @@
     "itemList": [],
     "isExternal": false,
     "path": "/concepts/nx-plugins",
-    "tags": ["generate-code", "create-your-own-plugin"]
+    "tags": ["generate-code", "create-your-own-plugin", "inferred-tasks"]
   },
   "/concepts/inferred-tasks": {
     "id": "inferred-tasks",
@@ -1632,7 +1599,7 @@
         "itemList": [],
         "isExternal": false,
         "path": "/concepts/more-concepts/how-project-graph-is-built",
-        "tags": ["explore-graph"]
+        "tags": ["explore-graph", "inferred-tasks"]
       }
     ],
     "isExternal": false,
@@ -1813,7 +1780,7 @@
     "itemList": [],
     "isExternal": false,
     "path": "/concepts/more-concepts/how-project-graph-is-built",
-    "tags": ["explore-graph"]
+    "tags": ["explore-graph", "inferred-tasks"]
   },
   "/recipes": {
     "id": "recipes",
@@ -2007,17 +1974,6 @@
         "mediaImage": "",
         "file": "",
         "itemList": [
-          {
-            "id": "migration-cra",
-            "name": "Migrating from CRA",
-            "description": "",
-            "mediaImage": "",
-            "file": "shared/migration/migration-cra",
-            "itemList": [],
-            "isExternal": false,
-            "path": "/recipes/react/migration-cra",
-            "tags": []
-          },
           {
             "id": "react-18",
             "name": "React 18 Migration",
@@ -3021,7 +2977,7 @@
             "itemList": [],
             "isExternal": false,
             "path": "/recipes/nx-console/console-telemetry",
-            "tags": ["integrate-with-editors"]
+            "tags": ["editor-setup"]
           },
           {
             "id": "console-project-details",
@@ -3032,7 +2988,7 @@
             "itemList": [],
             "isExternal": false,
             "path": "/recipes/nx-console/console-project-details",
-            "tags": ["integrate-with-editors"]
+            "tags": ["editor-setup"]
           },
           {
             "id": "console-generate-command",
@@ -3043,7 +2999,7 @@
             "itemList": [],
             "isExternal": false,
             "path": "/recipes/nx-console/console-generate-command",
-            "tags": ["integrate-with-editors"]
+            "tags": ["editor-setup"]
           },
           {
             "id": "console-run-command",
@@ -3054,7 +3010,7 @@
             "itemList": [],
             "isExternal": false,
             "path": "/recipes/nx-console/console-run-command",
-            "tags": ["integrate-with-editors"]
+            "tags": ["editor-setup"]
           },
           {
             "id": "console-add-dependency-command",
@@ -3065,7 +3021,7 @@
             "itemList": [],
             "isExternal": false,
             "path": "/recipes/nx-console/console-add-dependency-command",
-            "tags": ["integrate-with-editors"]
+            "tags": ["editor-setup"]
           },
           {
             "id": "console-project-pane",
@@ -3076,7 +3032,7 @@
             "itemList": [],
             "isExternal": false,
             "path": "/recipes/nx-console/console-project-pane",
-            "tags": ["integrate-with-editors"]
+            "tags": ["editor-setup"]
           },
           {
             "id": "console-shortcuts",
@@ -3087,7 +3043,7 @@
             "itemList": [],
             "isExternal": false,
             "path": "/recipes/nx-console/console-shortcuts",
-            "tags": ["integrate-with-editors"]
+            "tags": ["editor-setup"]
           },
           {
             "id": "console-troubleshooting",
@@ -3098,7 +3054,7 @@
             "itemList": [],
             "isExternal": false,
             "path": "/recipes/nx-console/console-troubleshooting",
-            "tags": ["integrate-with-editors"]
+            "tags": ["editor-setup"]
           }
         ],
         "isExternal": false,
@@ -3143,6 +3099,17 @@
             "itemList": [],
             "isExternal": false,
             "path": "/recipes/nx-release/automatically-version-with-conventional-commits",
+            "tags": ["nx-release"]
+          },
+          {
+            "id": "configure-custom-registries",
+            "name": "Configure Custom Registries",
+            "description": "",
+            "mediaImage": "",
+            "file": "shared/recipes/nx-release/configure-custom-registries",
+            "itemList": [],
+            "isExternal": false,
+            "path": "/recipes/nx-release/configure-custom-registries",
             "tags": ["nx-release"]
           },
           {
@@ -3573,17 +3540,6 @@
     "file": "",
     "itemList": [
       {
-        "id": "migration-cra",
-        "name": "Migrating from CRA",
-        "description": "",
-        "mediaImage": "",
-        "file": "shared/migration/migration-cra",
-        "itemList": [],
-        "isExternal": false,
-        "path": "/recipes/react/migration-cra",
-        "tags": []
-      },
-      {
         "id": "react-18",
         "name": "React 18 Migration",
         "description": "",
@@ -3674,17 +3630,6 @@
     ],
     "isExternal": false,
     "path": "/recipes/react",
-    "tags": []
-  },
-  "/recipes/react/migration-cra": {
-    "id": "migration-cra",
-    "name": "Migrating from CRA",
-    "description": "",
-    "mediaImage": "",
-    "file": "shared/migration/migration-cra",
-    "itemList": [],
-    "isExternal": false,
-    "path": "/recipes/react/migration-cra",
     "tags": []
   },
   "/recipes/react/react-18": {
@@ -5456,7 +5401,7 @@
         "itemList": [],
         "isExternal": false,
         "path": "/recipes/nx-console/console-telemetry",
-        "tags": ["integrate-with-editors"]
+        "tags": ["editor-setup"]
       },
       {
         "id": "console-project-details",
@@ -5467,7 +5412,7 @@
         "itemList": [],
         "isExternal": false,
         "path": "/recipes/nx-console/console-project-details",
-        "tags": ["integrate-with-editors"]
+        "tags": ["editor-setup"]
       },
       {
         "id": "console-generate-command",
@@ -5478,7 +5423,7 @@
         "itemList": [],
         "isExternal": false,
         "path": "/recipes/nx-console/console-generate-command",
-        "tags": ["integrate-with-editors"]
+        "tags": ["editor-setup"]
       },
       {
         "id": "console-run-command",
@@ -5489,7 +5434,7 @@
         "itemList": [],
         "isExternal": false,
         "path": "/recipes/nx-console/console-run-command",
-        "tags": ["integrate-with-editors"]
+        "tags": ["editor-setup"]
       },
       {
         "id": "console-add-dependency-command",
@@ -5500,7 +5445,7 @@
         "itemList": [],
         "isExternal": false,
         "path": "/recipes/nx-console/console-add-dependency-command",
-        "tags": ["integrate-with-editors"]
+        "tags": ["editor-setup"]
       },
       {
         "id": "console-project-pane",
@@ -5511,7 +5456,7 @@
         "itemList": [],
         "isExternal": false,
         "path": "/recipes/nx-console/console-project-pane",
-        "tags": ["integrate-with-editors"]
+        "tags": ["editor-setup"]
       },
       {
         "id": "console-shortcuts",
@@ -5522,7 +5467,7 @@
         "itemList": [],
         "isExternal": false,
         "path": "/recipes/nx-console/console-shortcuts",
-        "tags": ["integrate-with-editors"]
+        "tags": ["editor-setup"]
       },
       {
         "id": "console-troubleshooting",
@@ -5533,7 +5478,7 @@
         "itemList": [],
         "isExternal": false,
         "path": "/recipes/nx-console/console-troubleshooting",
-        "tags": ["integrate-with-editors"]
+        "tags": ["editor-setup"]
       }
     ],
     "isExternal": false,
@@ -5549,7 +5494,7 @@
     "itemList": [],
     "isExternal": false,
     "path": "/recipes/nx-console/console-telemetry",
-    "tags": ["integrate-with-editors"]
+    "tags": ["editor-setup"]
   },
   "/recipes/nx-console/console-project-details": {
     "id": "console-project-details",
@@ -5560,7 +5505,7 @@
     "itemList": [],
     "isExternal": false,
     "path": "/recipes/nx-console/console-project-details",
-    "tags": ["integrate-with-editors"]
+    "tags": ["editor-setup"]
   },
   "/recipes/nx-console/console-generate-command": {
     "id": "console-generate-command",
@@ -5571,7 +5516,7 @@
     "itemList": [],
     "isExternal": false,
     "path": "/recipes/nx-console/console-generate-command",
-    "tags": ["integrate-with-editors"]
+    "tags": ["editor-setup"]
   },
   "/recipes/nx-console/console-run-command": {
     "id": "console-run-command",
@@ -5582,7 +5527,7 @@
     "itemList": [],
     "isExternal": false,
     "path": "/recipes/nx-console/console-run-command",
-    "tags": ["integrate-with-editors"]
+    "tags": ["editor-setup"]
   },
   "/recipes/nx-console/console-add-dependency-command": {
     "id": "console-add-dependency-command",
@@ -5593,7 +5538,7 @@
     "itemList": [],
     "isExternal": false,
     "path": "/recipes/nx-console/console-add-dependency-command",
-    "tags": ["integrate-with-editors"]
+    "tags": ["editor-setup"]
   },
   "/recipes/nx-console/console-project-pane": {
     "id": "console-project-pane",
@@ -5604,7 +5549,7 @@
     "itemList": [],
     "isExternal": false,
     "path": "/recipes/nx-console/console-project-pane",
-    "tags": ["integrate-with-editors"]
+    "tags": ["editor-setup"]
   },
   "/recipes/nx-console/console-shortcuts": {
     "id": "console-shortcuts",
@@ -5615,7 +5560,7 @@
     "itemList": [],
     "isExternal": false,
     "path": "/recipes/nx-console/console-shortcuts",
-    "tags": ["integrate-with-editors"]
+    "tags": ["editor-setup"]
   },
   "/recipes/nx-console/console-troubleshooting": {
     "id": "console-troubleshooting",
@@ -5626,7 +5571,7 @@
     "itemList": [],
     "isExternal": false,
     "path": "/recipes/nx-console/console-troubleshooting",
-    "tags": ["integrate-with-editors"]
+    "tags": ["editor-setup"]
   },
   "/recipes/nx-release": {
     "id": "nx-release",
@@ -5666,6 +5611,17 @@
         "itemList": [],
         "isExternal": false,
         "path": "/recipes/nx-release/automatically-version-with-conventional-commits",
+        "tags": ["nx-release"]
+      },
+      {
+        "id": "configure-custom-registries",
+        "name": "Configure Custom Registries",
+        "description": "",
+        "mediaImage": "",
+        "file": "shared/recipes/nx-release/configure-custom-registries",
+        "itemList": [],
+        "isExternal": false,
+        "path": "/recipes/nx-release/configure-custom-registries",
         "tags": ["nx-release"]
       },
       {
@@ -5759,6 +5715,17 @@
     "itemList": [],
     "isExternal": false,
     "path": "/recipes/nx-release/automatically-version-with-conventional-commits",
+    "tags": ["nx-release"]
+  },
+  "/recipes/nx-release/configure-custom-registries": {
+    "id": "configure-custom-registries",
+    "name": "Configure Custom Registries",
+    "description": "",
+    "mediaImage": "",
+    "file": "shared/recipes/nx-release/configure-custom-registries",
+    "itemList": [],
+    "isExternal": false,
+    "path": "/recipes/nx-release/configure-custom-registries",
     "tags": ["nx-release"]
   },
   "/recipes/nx-release/publish-in-ci-cd": {
