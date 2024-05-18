@@ -58,7 +58,7 @@ If you want to add Nx to an existing repository run:
 npx nx@latest init
 ```
 
-You can also manually install the nx NPM package and create a [nx.json](https://nx.dev/reference/nx-json) to configure it. Learn more about [adopting Nx in an existing project](/recipes/adopting-nx)
+You can also manually install the nx NPM package and create a [nx.json](/reference/nx-json) to configure it. Learn more about [adopting Nx in an existing project](/recipes/adopting-nx)
 
 ## Installing Nx Globally
 
@@ -115,7 +115,7 @@ npx nx migrate --run-migrations
 ```
 
 {% callout title="Update One Major Version at a Time" %}
-To avoid potential issues, it is recommended to update one major version of Nx at a time.
+To avoid potential issues, it is [recommended to update one major version of Nx at a time](/recipes/tips-n-tricks/advanced-update#one-major-version-at-a-time-small-steps).
 {% /callout %}
 
 ## Tutorials

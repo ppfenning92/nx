@@ -14,6 +14,7 @@ import {
   runTasksInSerial,
   TargetConfiguration,
   Tree,
+  updateJson,
   updateNxJson,
   updateProjectConfiguration,
   writeJson,
@@ -109,6 +110,19 @@ function createApplicationFiles(tree: Tree, options: NormalizedSchema) {
       );
     }
   }
+  updateJson(
+    tree,
+    joinPathFragments(options.appProjectRoot, 'tsconfig.json'),
+    (json) => {
+      return {
+        ...json,
+        compilerOptions: {
+          ...(json.compilerOptions || {}),
+          strict: options.strict,
+        },
+      };
+    }
+  );
 }
 
 async function setupBundler(tree: Tree, options: NormalizedSchema) {
@@ -380,6 +394,7 @@ export async function applicationGeneratorInternal(host: Tree, schema: Schema) {
       sourceRoot: joinPathFragments(options.e2eProjectRoot, 'src'),
       projectType: 'application',
       targets: {},
+      tags: [],
       implicitDependencies: [options.projectName],
     });
     const playwrightTask = await playwrightConfigGenerator(host, {
@@ -521,14 +536,10 @@ async function normalizeOptions(
     ? options.tags.split(',').map((s) => s.trim())
     : [];
 
-  if (options.bundler === 'vite' && options.unitTestRunner !== 'none') {
-    options.unitTestRunner = 'vitest';
-  }
-
   options.style = options.style || 'css';
   options.linter = options.linter || ('eslint' as Linter.EsLint);
   options.unitTestRunner = options.unitTestRunner || 'jest';
-  options.e2eTestRunner = options.e2eTestRunner || 'cypress';
+  options.e2eTestRunner = options.e2eTestRunner || 'playwright';
 
   return {
     ...options,
@@ -537,6 +548,7 @@ async function normalizeOptions(
     compiler: options.compiler ?? 'babel',
     bundler: options.bundler ?? 'webpack',
     projectName: appProjectName,
+    strict: options.strict ?? true,
     appProjectRoot,
     e2eProjectRoot,
     e2eProjectName,

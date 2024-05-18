@@ -37,8 +37,8 @@ exports[`preset should create files (preset = angular-monorepo) 3`] = `
 `;
 
 exports[`preset should create files (preset = react-monorepo) 1`] = `
-"const { NxWebpackPlugin } = require('@nx/webpack');
-const { NxReactWebpackPlugin } = require('@nx/react');
+"const { NxAppWebpackPlugin } = require('@nx/webpack/app-plugin');
+const { NxReactWebpackPlugin } = require('@nx/react/webpack-plugin');
 const { join } = require('path');
 
 module.exports = {
@@ -49,7 +49,7 @@ module.exports = {
     port: 4200,
   },
   plugins: [
-    new NxWebpackPlugin({
+    new NxAppWebpackPlugin({
       tsConfig: './tsconfig.app.json',
       compiler: 'babel',
       main: './src/main.tsx',
@@ -78,7 +78,7 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: './node_modules/.vite/.',
+  cacheDir: './node_modules/.vite/proj',
 
   server: {
     port: 4200,
@@ -99,6 +99,7 @@ export default defineConfig({
 
   build: {
     outDir: './dist/proj',
+    emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
@@ -108,7 +109,7 @@ export default defineConfig({
   test: {
     globals: true,
     cache: {
-      dir: './node_modules/.vitest',
+      dir: './node_modules/.vitest/proj',
     },
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
@@ -124,8 +125,8 @@ export default defineConfig({
 `;
 
 exports[`preset should create files (preset = react-standalone bundler = webpack) 1`] = `
-"const { NxWebpackPlugin } = require('@nx/webpack');
-const { NxReactWebpackPlugin } = require('@nx/react');
+"const { NxAppWebpackPlugin } = require('@nx/webpack/app-plugin');
+const { NxReactWebpackPlugin } = require('@nx/react/webpack-plugin');
 const { join } = require('path');
 
 module.exports = {
@@ -136,7 +137,7 @@ module.exports = {
     port: 4200,
   },
   plugins: [
-    new NxWebpackPlugin({
+    new NxAppWebpackPlugin({
       tsConfig: './tsconfig.app.json',
       compiler: 'babel',
       main: './src/main.tsx',
@@ -186,6 +187,7 @@ export default defineConfig({
 
   build: {
     outDir: '../../dist/apps/proj',
+    emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
@@ -195,7 +197,7 @@ export default defineConfig({
   test: {
     globals: true,
     cache: {
-      dir: '../../node_modules/.vitest',
+      dir: '../../node_modules/.vitest/apps/proj',
     },
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
@@ -218,7 +220,7 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: './node_modules/.vite/.',
+  cacheDir: './node_modules/.vite/proj',
 
   server: {
     port: 4200,
@@ -239,6 +241,7 @@ export default defineConfig({
 
   build: {
     outDir: './dist/proj',
+    emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
@@ -248,7 +251,7 @@ export default defineConfig({
   test: {
     globals: true,
     cache: {
-      dir: './node_modules/.vitest',
+      dir: './node_modules/.vitest/proj',
     },
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
